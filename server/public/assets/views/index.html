@@ -15,7 +15,7 @@
 <body>
     <h1>Names and Favorite Numbers</h1>
     <div ng-controller="NumberController">
-        <div ng-repeat="person in people" class="col-md-3 well">
+        <div ng-repeat="person in people | orderBy: 'name'" class="col-md-3 well">
             <p>{{person.name}}</p>
             <p>{{person.location}}</p>
             <p>{{person.favorite_number}}</p>
