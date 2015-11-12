@@ -17,9 +17,9 @@ var Person = mongoose.model('Person');
 router.get('/people', function(req, res){
     console.log("data upload request. Data is: ", req.body);
    Person.find({}, function(err, data){
+       res.send(data);
        if (err) {
            console.log("Error retrieving data from database: ", err);
-           res.send("Did you receive?");
        }
    });
 });

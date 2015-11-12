@@ -11,8 +11,8 @@ myApp.controller("NumberController", ["$scope", "$http", function($scope, $http)
         $http.get('/people').then(function(response) {
             console.log("Did you get this?");
             $scope.people = response.data;
-            console.log(response.data);
+            console.log("This is the response" , response.data);
         });
-    }
-    $scope.getPeople()
+    };
+    $scope.getPeople();
 }]);
