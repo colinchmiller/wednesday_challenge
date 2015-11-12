@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Wednesday Challenge</title>
+
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+
+    <script type="text/javascript" src="vendors/angular.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/app.min.js"></script>
+
+</head>
+
+<body>
+    <h1>Names and Favorite Numbers</h1>
+    <div ng-controller="NumberController">
+        <div ng-repeat="person in people" class="col-md-3 well">
+            <p>{{person.name}}</p>
+            <p>{{person.location}}</p>
+            <p>{{person.favorite_number}}</p>
+        </div>
+    </div>
+</body>
+</html>
